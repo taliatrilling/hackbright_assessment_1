@@ -132,7 +132,7 @@ def halvesies(numbers):
         [0.5, 2.5]
     """
 
-    halvesies = [float(number/2) for number in numbers]
+    halvesies = [float(number)/2 for number in numbers]
 
     return halvesies
 
@@ -199,6 +199,7 @@ def mult_numbers(numbers):
         1
     """
 
+    #NEED TO COME BACK
     return None
 
 
@@ -343,7 +344,18 @@ def duplicates(items):
         ['apple', 'apple', 'berry']
     """
 
-    return []
+    duplicates_list = []
+    reference_list = []
+
+    for item in items:
+        if item in duplicates_list:
+            pass
+        elif item in reference_list:
+            duplicates_list.append(item)
+        else:
+            reference_list.append(item)
+
+    return duplicates_list
 
 
 def find_letter_indices(words, letter):
@@ -372,8 +384,22 @@ def find_letter_indices(words, letter):
     ("o" does not appear in "jumps", so the result for that input is
     `None`.)
     """
+    indices_list = []
+    
+    #I think there might be a better way to do what I'm doing below, but when I didn't set the default to 
+    #"None" before I iterated through the list, I kept accidentally setting all of the values in the 
+    #indices list to "None"
+    for z in range(len(words)):
+        indices_list.append(None)
 
-    return []
+    for i in range(len(words)):
+        for x in range(len(words[i])):
+            if words[i][x] == letter:
+                indices_list[i] = x
+                break
+
+    return indices_list
+
 
 #####################################################################
 # END OF PRACTICE: You can ignore everything below.
