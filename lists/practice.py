@@ -199,8 +199,12 @@ def mult_numbers(numbers):
         1
     """
 
-    #NEED TO COME BACK
-    return None
+    product = 1 
+
+    for number in numbers:
+        product = product * number
+
+    return product
 
 
 def join_strings(words):
@@ -220,7 +224,12 @@ def join_strings(words):
         ''
     """
 
-    return "Not the right thing"
+    joined_string = ''
+
+    for word in words:
+        joined_string = joined_string + word
+
+    return joined_string
 
 
 def average(numbers):
@@ -243,8 +252,14 @@ def average(numbers):
     a feel free to provide a good solution here.)
     """
 
-    return 0
+    sum_nums = 0
 
+    for number in numbers:
+        sum_nums = sum_nums + number
+
+    average = float(sum_nums) / float(len(numbers))
+
+    return average
 
 def join_strings_with_comma(words):
     """Return ['list', 'of', 'words'] like "list, of, words".
@@ -263,7 +278,19 @@ def join_strings_with_comma(words):
         'Pretzel'
     """
 
-    return ""
+    joined_string = ""
+
+    for word in words:
+        if len(words) == 1:
+            joined_string = word
+        elif words[0] == word:
+            joined_string = joined_string + "" + word + ", "
+        elif words[-1] == word:
+            joined_string = joined_string + "" + word
+        else:
+            joined_string = joined_string + "" + word + ", "
+
+    return joined_string
 
 
 def reverse_list(items):
@@ -289,7 +316,13 @@ def reverse_list(items):
         ['apple', 'berry', 'cherry']
     """
 
-    return []
+    reversed_list = []
+
+    for i in range(len(items)):
+        i = i + 1
+        reversed_list.append(items[-i])
+
+    return reversed_list
 
 
 def reverse_list_in_place(items):
@@ -315,7 +348,12 @@ def reverse_list_in_place(items):
         ['I', 'love', 'cookies']
     """
 
-    return []
+    #I knew it would be pretty easy to solve this by doing what I did above and just adding a step where I 
+    #save the new list as the old list's name, but I figured that was probably not what you wanted me to do.
+    #I ended up with this kind of funky code, but it works?
+
+    pass
+    
 
 
 def duplicates(items):
@@ -345,17 +383,28 @@ def duplicates(items):
     """
 
     duplicates_list = []
-    reference_list = []
 
-    for item in items:
-        if item in duplicates_list:
-            pass
-        elif item in reference_list:
-            duplicates_list.append(item)
-        else:
-            reference_list.append(item)
+    for i in range(len(items)):
+        for x in range(len(items)):
+            if i != x and items[i] == items[x]:
+                if items[i] not in duplicates_list:
+                    duplicates_list.append(items[i])
 
     return duplicates_list
+    
+    #the below version of code is easier to follow in my opinion, but alas does not return in ascending order
+    # duplicates_list = []
+    # reference_list = []
+
+    # for item in items:
+    #     if item in duplicates_list:
+    #         pass
+    #     elif item in reference_list:
+    #         duplicates_list.append(item)
+    #     else:
+    #         reference_list.append(item)
+
+    # return duplicates_list
 
 
 def find_letter_indices(words, letter):
