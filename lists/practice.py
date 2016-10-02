@@ -350,7 +350,8 @@ def reverse_list_in_place(items):
 
     #I knew it would be pretty easy to solve this by doing what I did above and just adding a step where I 
     #save the new list as the old list's name, but I figured that was probably not what you wanted me to do.
-    #I ended up with this kind of funky code, but it works?
+    #I ended up with this kind of funky code, but it works? I think there is maybe a better way, but this was the 
+    #solution that I found that worked with lists of different lengths (not just lists of len(3))
 
     length = range(len(items))
 
