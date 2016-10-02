@@ -21,7 +21,6 @@ def print_list(items):
     for item in items:
         print item
 
-
 def long_words(words):
     """Return words in input list that longer than 4 characters.
 
@@ -62,7 +61,6 @@ def n_long_words(words, n):
 
     return n_long_words
 
-
 def smallest_int(numbers):
     """Find the smallest integer in a list of integers and return it.
 
@@ -88,7 +86,6 @@ def smallest_int(numbers):
         return None
     else:
         return numbers[0]
-
 
 def largest_int(numbers):
     """Find the largest integer in a list of integers and return it.
@@ -116,7 +113,6 @@ def largest_int(numbers):
     else:
         return numbers[-1]
 
-
 def halvesies(numbers):
     """Return list of numbers from input list, each divided by two.
 
@@ -136,7 +132,6 @@ def halvesies(numbers):
 
     return halvesies
 
-
 def word_lengths(words):
     """Return the length of words in the input list.
 
@@ -149,7 +144,6 @@ def word_lengths(words):
     word_lengths = [len(word) for word in words]
 
     return word_lengths
-
 
 def sum_numbers(numbers):
     """Return the sum of all of the numbers in the list.
@@ -178,7 +172,6 @@ def sum_numbers(numbers):
 
     return sum_num
 
-
 def mult_numbers(numbers):
     """Return product (result of multiplication) of numbers in list.
 
@@ -206,7 +199,6 @@ def mult_numbers(numbers):
 
     return product
 
-
 def join_strings(words):
     """Return a string of all input strings joined together.
 
@@ -231,7 +223,6 @@ def join_strings(words):
 
     return joined_string
 
-
 def average(numbers):
     """Return the average (mean) of the list of numbers given.
 
@@ -251,6 +242,10 @@ def average(numbers):
     (Think of the best way to handle an empty input list, though,
     a feel free to provide a good solution here.)
     """
+
+    #In terms of handling an empty input list, I think the best option would be to add an if statement
+    #saying that if len(numbers) == 0, return "None" or some sort of message saying that the average cannot
+    #be calculated with an empty list. 
 
     sum_nums = 0
 
@@ -292,7 +287,6 @@ def join_strings_with_comma(words):
 
     return joined_string
 
-
 def reverse_list(items):
     """Return the input list, reversed.
 
@@ -323,7 +317,6 @@ def reverse_list(items):
         reversed_list.append(items[-i])
 
     return reversed_list
-
 
 def reverse_list_in_place(items):
     """Reverse the input list `in place`.
@@ -367,7 +360,6 @@ def reverse_list_in_place(items):
 
     for i in range_to_delete:
         items.pop(i)
-
 
 def duplicates(items):
     """Return list of words from input list which were duplicates.
@@ -419,7 +411,6 @@ def duplicates(items):
 
     # return duplicates_list
 
-
 def find_letter_indices(words, letter):
     """Return list of indices where letter appears in each word.
 
@@ -451,6 +442,7 @@ def find_letter_indices(words, letter):
     #I think there might be a better way to do what I'm doing below, but when I didn't set the default to 
     #"None" before I iterated through the list, I kept accidentally setting all of the values in the 
     #indices list to "None"
+    
     for z in range(len(words)):
         indices_list.append(None)
 
@@ -461,7 +453,6 @@ def find_letter_indices(words, letter):
                 break
 
     return indices_list
-
 
 #####################################################################
 # END OF PRACTICE: You can ignore everything below.

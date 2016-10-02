@@ -69,6 +69,7 @@ PART TWO:
 
 def hello_world():
     """Prints 'Hello World'"""
+
     print "Hello World"
 
 # 2. Write a function called 'say_hi' that takes a name as a string and
@@ -76,6 +77,7 @@ def hello_world():
 
 def say_hi(name):
     """Takes in a name as a parameter and prints a message saying 'Hi' to that name"""
+
     print "Hi", name
 
 
@@ -84,6 +86,7 @@ def say_hi(name):
 
 def print_product(integer_1, integer_2):
     """Takes in two integers as parameters and prints the product of their multiplication"""
+
     print integer_1 * integer_2
 
 # 4. Write a function called 'repeat_string' that takes a string and an integer and
@@ -91,6 +94,7 @@ def print_product(integer_1, integer_2):
 
 def repeat_string(string, integer):
     """Takes in a string and an integer as parameters and prints the string as many times as the integer"""
+
     print string * integer
 
 # 5. Write a function called 'print_sign' that takes an integer and prints "Higher
@@ -99,6 +103,7 @@ def repeat_string(string, integer):
 
 def print_sign(integer):
     """Takes in an integer as a parameter and prints if it is higher or lower than zero, or the number zero itself"""
+    
     if integer > 0:
         print "Higher than 0"
     if integer < 0: 
@@ -112,6 +117,7 @@ def print_sign(integer):
 
 def is_divisible_by_three(integer):
     """Takes in an integer as a parameter and returns a boolean indicating if the integer is evenly divisible by 3"""
+    
     if integer % 3 == 0:
         return True
     else:
@@ -122,6 +128,7 @@ def is_divisible_by_three(integer):
 
 def num_spaces(sentence_string):
     """Takes in a string of a sentence as a parameter and counts/returns the number of spaces in the string"""
+    
     space_count = 0
 
     for character in sentence_string:
@@ -188,6 +195,7 @@ print sign, parity
 
 def full_title(name, job_title = "Engineer"):
     """Takes in a name as a parameter and a job title as an optional parameter (defaults to engineer). Returns a full title (Job and Name)"""
+    
     return job_title + " " + name
 
 
@@ -202,6 +210,7 @@ def full_title(name, job_title = "Engineer"):
 
 def write_letter(recipient_name, job_title, sender_name):
     """Takes in a recipent name, job title and sender name to print a generic message."""
+    
     print "Dear " + full_title(recipient_name, job_title) + ", I think you are amazing! Sincerely, " + sender_name
 
 

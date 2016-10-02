@@ -21,7 +21,6 @@ def all_odd(numbers):
 
     return odd_numbers
 
-
 def print_indices(items):
     """Print index of each item in list, followed by item itself.
 
@@ -71,6 +70,7 @@ def foods_in_common(foods1, foods2):
         []
 
     """
+
     foods_in_common_list = []
 
     foods_in_common_set = set(foods1) & set(foods2)
@@ -79,7 +79,6 @@ def foods_in_common(foods1, foods2):
         foods_in_common_list.append(food)
 
     return foods_in_common_list
-
 
 def every_other_item(items):
     """Return every other item in `items`, starting at first item.
@@ -136,7 +135,6 @@ def largest_n_items(items, n):
     largest_n_items_list.sort()
 
     return largest_n_items_list
-
 
 #####################################################################
 # END OF ASSESSMENT: You can ignore everything below.
