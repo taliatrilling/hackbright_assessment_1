@@ -352,8 +352,20 @@ def reverse_list_in_place(items):
     #save the new list as the old list's name, but I figured that was probably not what you wanted me to do.
     #I ended up with this kind of funky code, but it works?
 
-    pass
-    
+    length = range(len(items))
+
+    length.sort(reverse = True)
+
+    for i in length:
+        items.append(items[i])
+
+    to_delete = len(items) / 2 
+    range_to_delete = range(to_delete)
+
+    range_to_delete.sort(reverse = True)
+
+    for i in range_to_delete:
+        items.pop(i)
 
 
 def duplicates(items):
